@@ -755,6 +755,190 @@ input,select,textarea{font-family:inherit}
 .why-card--featured li i{color:var(--gold2)}
 
 /* ════════════════════════════════
+   WAREHOUSE — Наш склад
+════════════════════════════════ */
+.wh{background:#f1f5f9}
+
+/* ── 4 equal photos 2×2 ── */
+.wh__gallery{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  grid-template-rows:280px 280px;
+  gap:12px;
+  margin-bottom:32px;
+  border-radius:20px;
+  overflow:hidden;
+}
+.wh__photo{
+  position:relative;overflow:hidden;cursor:pointer;
+}
+.wh__photo img{
+  width:100%;height:100%;object-fit:cover;
+  display:block;
+  transition:transform .5s cubic-bezier(.25,.46,.45,.94);
+}
+.wh__photo:hover img{transform:scale(1.06)}
+
+/* caption overlay — hidden, slides up on hover */
+.wh__photo-cap{
+  position:absolute;bottom:0;left:0;right:0;
+  display:flex;align-items:center;gap:8px;
+  padding:14px 18px;
+  background:linear-gradient(0deg,rgba(10,26,80,.88) 0%,transparent 100%);
+  color:#fff;font-size:13px;font-weight:600;
+  transform:translateY(100%);
+  transition:transform .35s cubic-bezier(.25,.46,.45,.94);
+}
+.wh__photo-cap i{color:var(--gold);font-size:14px}
+.wh__photo:hover .wh__photo-cap{transform:translateY(0)}
+
+/* ── Stats bar ── */
+.wh__stats{
+  display:grid;grid-template-columns:repeat(4,1fr);
+  gap:14px;margin-bottom:40px;
+}
+.wh__stat{
+  background:#fff;border-radius:18px;
+  padding:24px 16px;text-align:center;
+  border:1.5px solid #e2e8f0;
+  transition:box-shadow .25s,transform .25s,border-color .25s;
+}
+.wh__stat:hover{
+  box-shadow:0 10px 40px rgba(16,52,122,.12);
+  transform:translateY(-4px);
+  border-color:rgba(16,52,122,.2);
+}
+.wh__stat-icon{
+  width:46px;height:46px;border-radius:13px;
+  background:linear-gradient(135deg,var(--navy),#1a4199);
+  display:flex;align-items:center;justify-content:center;
+  color:var(--gold);font-size:18px;
+  margin:0 auto 12px;
+}
+.wh__stat strong{
+  display:block;font-size:26px;font-weight:800;
+  color:var(--navy);margin-bottom:4px;line-height:1;
+}
+.wh__stat span{font-size:12px;color:var(--text2);font-weight:500;line-height:1.4}
+
+/* ── Info strip ── */
+.wh__info-strip{
+  display:flex;align-items:center;justify-content:space-between;
+  gap:32px;
+  background:#fff;border-radius:20px;
+  padding:32px 36px;
+  margin-bottom:24px;
+  border:1.5px solid #e2e8f0;
+}
+.wh__desc{flex:1}
+.wh__desc h3{
+  font-size:22px;font-weight:800;color:var(--navy);
+  margin-bottom:10px;line-height:1.3;
+}
+.wh__desc p{
+  font-size:14px;color:var(--text2);line-height:1.7;margin:0;
+}
+.wh__location{
+  display:flex;align-items:center;gap:7px;
+  font-size:13px;font-weight:600;color:var(--navy);
+  margin-top:14px;
+}
+.wh__location i{color:var(--gold)}
+
+/* ── Features 3×2 grid ── */
+.wh__features{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:14px;
+}
+.wh__feat{
+  background:#fff;border-radius:18px;
+  padding:24px 22px;
+  border:1.5px solid #e2e8f0;
+  transition:border-color .2s,box-shadow .25s,transform .25s;
+}
+.wh__feat:hover{
+  border-color:var(--navy);
+  box-shadow:0 8px 32px rgba(16,52,122,.1);
+  transform:translateY(-3px);
+}
+.wh__feat-icon{
+  width:48px;height:48px;border-radius:14px;
+  background:linear-gradient(135deg,var(--navy),#1a4199);
+  display:flex;align-items:center;justify-content:center;
+  color:var(--gold);font-size:20px;
+  margin-bottom:14px;
+}
+.wh__feat strong{
+  display:block;font-size:14px;font-weight:700;
+  color:var(--navy);margin-bottom:6px;
+}
+.wh__feat p{
+  font-size:13px;color:var(--text2);margin:0;line-height:1.55;
+}
+
+/* ── Warehouse Network ── */
+.wh__network{
+  margin-top:32px;
+  background:#fff;border-radius:20px;
+  padding:32px 36px;
+}
+.wh__net-header{
+  display:flex;align-items:center;gap:10px;
+  font-size:13px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;
+  color:var(--gold);margin-bottom:24px;
+}
+.wh__net-header i{font-size:18px}
+.wh__net-cards{
+  display:grid;
+  grid-template-columns:repeat(5,1fr);
+  gap:14px;
+}
+.wh__net-card{
+  background:#f8fafc;border-radius:14px;
+  padding:20px 16px;
+  display:flex;flex-direction:column;align-items:center;text-align:center;gap:10px;
+  border:1.5px solid transparent;
+  transition:border-color .25s,box-shadow .25s,transform .25s;
+}
+.wh__net-card:hover{
+  border-color:rgba(16,52,122,.15);
+  box-shadow:0 8px 24px rgba(16,52,122,.08);
+  transform:translateY(-4px);
+}
+.wh__net-flag{font-size:36px;line-height:1}
+.wh__net-card strong{font-size:15px;font-weight:700;color:var(--navy)}
+.wh__net-tags{display:flex;flex-wrap:wrap;gap:6px;justify-content:center}
+.tag{
+  font-size:11px;font-weight:600;padding:3px 9px;border-radius:20px;line-height:1.4;
+}
+.tag--bonded{background:rgba(16,52,122,.1);color:var(--navy)}
+.tag--open{background:rgba(212,160,23,.12);color:#9a7000}
+.wh__net-area{
+  font-size:12px;color:var(--text2);display:flex;align-items:center;gap:5px;
+}
+.wh__net-area i{color:var(--gold);font-size:11px}
+
+/* ── Responsive ── */
+@media(max-width:1024px){
+  .wh__features{grid-template-columns:repeat(2,1fr)}
+  .wh__net-cards{grid-template-columns:repeat(3,1fr)}
+}
+@media(max-width:900px){
+  .wh__gallery{grid-template-rows:220px 220px}
+  .wh__stats{grid-template-columns:repeat(2,1fr)}
+  .wh__info-strip{flex-direction:column;align-items:flex-start;gap:20px}
+}
+@media(max-width:600px){
+  .wh__gallery{grid-template-rows:180px 180px;gap:8px}
+  .wh__stats{grid-template-columns:repeat(2,1fr)}
+  .wh__features{grid-template-columns:1fr}
+  .wh__info-strip{padding:24px 20px}
+  .wh__net-cards{grid-template-columns:repeat(2,1fr)}
+  .wh__network{padding:24px 16px}
+}
+
+/* ════════════════════════════════
    ABOUT — dark navy
 ════════════════════════════════ */
 .about--dark{
@@ -1080,6 +1264,14 @@ input,select,textarea{font-family:inherit}
 }
 .footer__bottom p{font-size:13px;color:rgba(255,255,255,.3)}
 .footer__bottom .lang-btn{color:rgba(255,255,255,.5)}
+.footer__dev{
+  font-size:12px;color:rgba(255,255,255,.3);
+  text-decoration:none;white-space:nowrap;
+  transition:color .2s;
+}
+.footer__dev:hover{color:var(--gold)}
+.footer__dev span{font-weight:700;color:rgba(255,255,255,.5)}
+.footer__dev:hover span{color:var(--gold)}
 
 /* Map inside footer */
 #vanguardMap{
