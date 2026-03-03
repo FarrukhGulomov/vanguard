@@ -7,7 +7,7 @@ const cors = require('cors');
 const path = require('path');
 const fs = require('fs');
 const app = express();
-app.set('trust proxy', 1);
+app.set('trust proxy', true);
 const PORT = process.env.PORT || 3000;
 
 // Security middleware
@@ -32,6 +32,9 @@ app.use(express.urlencoded({ extended: true, limit: '10kb' }));
 const contactLimiter = rateLimit({
   windowMs: 15 * 60 * 1000,
   max: 10,
+  standardHeaders: true,
+  legacyHeaders: false,
+  validate: { xForwardedForHeader: false },
   message: { success: false, message: 'Слишком много запросов. Попробуйте через 15 минут.' }
 });
 
