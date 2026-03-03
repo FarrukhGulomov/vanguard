@@ -51,16 +51,21 @@ const esc = (str) =>
 
 /** Build nodemailer transporter from env */
 const createTransporter = () => {
-  const secure = process.env.SMTP_SECURE === 'true';
+  const port = parseInt(process.env.SMTP_PORT) || 587;
+  const secure = port === 465;
   return nodemailer.createTransport({
     host: process.env.SMTP_HOST || 'smtp.gmail.com',
-    port: parseInt(process.env.SMTP_PORT) || (secure ? 465 : 587),
+    port,
     secure,
+    requireTLS: !secure,
     auth: {
       user: process.env.SMTP_USER,
       pass: process.env.SMTP_PASS,
     },
     tls: { rejectUnauthorized: false },
+    connectionTimeout: 10000,
+    greetingTimeout: 8000,
+    socketTimeout: 10000,
   });
 };
 
