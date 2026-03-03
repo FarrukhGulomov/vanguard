@@ -191,7 +191,7 @@ app.post('/api/contact', contactLimiter, async (req, res) => {
       const date = new Date().toLocaleString('ru-RU', { timeZone: 'Asia/Tashkent' });
 
       await transporter.sendMail({
-        from: `"Vanguard Logistics Сайт" <${process.env.SMTP_USER}>`,
+        from: `"Vanguard Logistics Сайт" <${process.env.SMTP_FROM || process.env.SMTP_USER}>`,
         to: process.env.RECIPIENT_EMAIL || 'anvarataev@vanguarduzb.com',
         replyTo: submission.email || undefined,
         subject: `Новая заявка: ${submission.name} (${submission.phone})`,
