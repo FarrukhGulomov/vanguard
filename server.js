@@ -1,6 +1,7 @@
 require('dotenv').config();
 const express = require('express');
 const nodemailer = require('nodemailer');
+const { Resend } = require('resend');
 const rateLimit = require('express-rate-limit');
 const helmet = require('helmet');
 const cors = require('cors');
@@ -184,31 +185,39 @@ app.post('/api/contact', contactLimiter, async (req, res) => {
   // Always save to file
   saveSubmission(submission);
 
-  // Send email if SMTP is configured
-  if (process.env.SMTP_USER && process.env.SMTP_PASS) {
-    try {
-      const transporter = createTransporter();
-      const date = new Date().toLocaleString('ru-RU', { timeZone: 'Asia/Tashkent' });
+  // Send email
+  const date = new Date().toLocaleString('ru-RU', { timeZone: 'Asia/Tashkent' });
+  const recipient = process.env.RECIPIENT_EMAIL || 'anvarataev@vanguarduzb.com';
+  const fromAddr = process.env.SMTP_FROM || 'noreply@vanguarduzb.com';
 
-      await transporter.sendMail({
-        from: `"Vanguard Logistics Сайт" <${process.env.SMTP_FROM || process.env.SMTP_USER}>`,
-        to: process.env.RECIPIENT_EMAIL || 'anvarataev@vanguarduzb.com',
+  if (process.env.RESEND_API_KEY) {
+    // Resend HTTP API — works on Railway without SMTP port issues
+    try {
+      const resend = new Resend(process.env.RESEND_API_KEY);
+      await resend.emails.send({
+        from: `Vanguard Logistics Сайт <${fromAddr}>`,
+        to: recipient,
         replyTo: submission.email || undefined,
         subject: `Новая заявка: ${submission.name} (${submission.phone})`,
         html: buildEmailHtml({ ...submission, date }),
-        text: [
-          `Новая заявка с сайта Vanguard Logistics`,
-          `Дата: ${date}`,
-          `Имя: ${submission.name}`,
-          `Телефон: ${submission.phone}`,
-          `Email: ${submission.email || '—'}`,
-          `Компания: ${submission.company || '—'}`,
-          `Сообщение: ${submission.message || '—'}`,
-        ].join('\n'),
       });
     } catch (err) {
       console.error('[Email error]', err.message);
-      // Submission is saved — still return success
+    }
+  } else if (process.env.SMTP_USER && process.env.SMTP_PASS) {
+    // Fallback: SMTP
+    try {
+      const transporter = createTransporter();
+      await transporter.sendMail({
+        from: `"Vanguard Logistics Сайт" <${fromAddr}>`,
+        to: recipient,
+        replyTo: submission.email || undefined,
+        subject: `Новая заявка: ${submission.name} (${submission.phone})`,
+        html: buildEmailHtml({ ...submission, date }),
+        text: `Имя: ${submission.name}\nТелефон: ${submission.phone}\nEmail: ${submission.email || '—'}\nКомпания: ${submission.company || '—'}\nСообщение: ${submission.message || '—'}`,
+      });
+    } catch (err) {
+      console.error('[Email error]', err.message);
     }
   }
 
