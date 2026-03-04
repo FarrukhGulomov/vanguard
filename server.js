@@ -168,6 +168,14 @@ app.post('/api/contact', contactLimiter, async (req, res) => {
   if (String(name).length > 100 || String(phone).length > 30) {
     return res.status(400).json({ success: false, message: 'Неверные данные.' });
   }
+  // Phone: must contain at least 7 digits
+  if (String(phone).replace(/\D/g, '').length < 7) {
+    return res.status(400).json({ success: false, message: 'Введите корректный номер телефона.' });
+  }
+  // Email: validate format if provided
+  if (email && !/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(String(email).trim())) {
+    return res.status(400).json({ success: false, message: 'Введите корректный email адрес.' });
+  }
 
   // Combine country code + local number
   const fullPhone = phone_code

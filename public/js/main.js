@@ -165,6 +165,8 @@ const i18n = {
     'form.message.ph':'Опишите ваш груз, маршрут, сроки...',
     'form.submit':'Отправить заявку',
     'form.success':'Заявка принята! Мы свяжемся с вами в ближайшее время.',
+    'form.err.phone':'Введите корректный номер телефона (только цифры)',
+    'form.err.email':'Введите корректный email адрес',
     'modal.title':'Рассчитать стоимость',
     'modal.desc':'Заполните форму — мы рассчитаем и свяжемся с вами',
     'modal.company.ph':'Название компании',
@@ -340,6 +342,8 @@ const i18n = {
     'form.message.ph':'Yukingiz, marshrut, muddatlar haqida...',
     'form.submit':'Ariza yuborish',
     'form.success':'Ariza qabul qilindi! Tez orada siz bilan bog\'lanamiz.',
+    'form.err.phone':'To\'g\'ri telefon raqamini kiriting (faqat raqamlar)',
+    'form.err.email':'To\'g\'ri email manzilini kiriting',
     'modal.title':'Narxni hisoblash',
     'modal.desc':'Formani to\'ldiring — narxni hisoblab, siz bilan bog\'lanamiz',
     'modal.company.ph':'Kompaniya nomi',
@@ -515,6 +519,8 @@ const i18n = {
     'form.message.ph':'Describe your cargo, route, deadlines...',
     'form.submit':'Send Request',
     'form.success':'Request received! We will contact you shortly.',
+    'form.err.phone':'Please enter a valid phone number (digits only)',
+    'form.err.email':'Please enter a valid email address',
     'modal.title':'Calculate Cost',
     'modal.desc':'Fill the form — we will calculate and contact you',
     'modal.company.ph':'Company Name',
@@ -785,9 +791,75 @@ function initForms() {
       inp.value = v.slice(0,13);
     });
   });
+
+  // Phone: strip non-digits on input (allow leading +)
+  const cfPhone = document.getElementById('cfPhone');
+  if (cfPhone) {
+    cfPhone.addEventListener('input', () => {
+      const pos = cfPhone.selectionStart;
+      const raw = cfPhone.value;
+      const cleaned = raw.replace(/[^\d+\s\-()]/g, '');
+      if (cleaned !== raw) {
+        cfPhone.value = cleaned;
+        cfPhone.setSelectionRange(pos - 1, pos - 1);
+      }
+      clearFieldErr('cfPhoneErr');
+    });
+    cfPhone.addEventListener('blur', () => validatePhone(cfPhone));
+  }
+
+  // Email: validate on blur
+  const cfEmail = document.getElementById('cfEmail');
+  if (cfEmail) {
+    cfEmail.addEventListener('input', () => clearFieldErr('cfEmailErr'));
+    cfEmail.addEventListener('blur', () => {
+      if (cfEmail.value.trim()) validateEmail(cfEmail);
+    });
+  }
+}
+
+function clearFieldErr(id) {
+  const el = document.getElementById(id);
+  if (el) { el.textContent = ''; el.style.display = 'none'; }
+}
+
+function showFieldErr(id, msg) {
+  const el = document.getElementById(id);
+  if (el) { el.textContent = msg; el.style.display = 'block'; }
+}
+
+function validatePhone(inp) {
+  const digits = (inp.value || '').replace(/\D/g, '');
+  if (digits.length < 7) {
+    const msg = i18n[currentLang]?.['form.err.phone'] || 'Invalid phone number';
+    showFieldErr('cfPhoneErr', msg);
+    return false;
+  }
+  clearFieldErr('cfPhoneErr');
+  return true;
+}
+
+function validateEmail(inp) {
+  const v = (inp.value || '').trim();
+  const ok = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(v);
+  if (!ok) {
+    const msg = i18n[currentLang]?.['form.err.email'] || 'Invalid email address';
+    showFieldErr('cfEmailErr', msg);
+    return false;
+  }
+  clearFieldErr('cfEmailErr');
+  return true;
 }
 
 async function handleSubmit(form, btnId, successId, errorId, isModal=false) {
+  // Frontend validation
+  const phoneInp = form.querySelector('#cfPhone');
+  const emailInp = form.querySelector('#cfEmail');
+  let valid = true;
+  if (phoneInp && !validatePhone(phoneInp)) valid = false;
+  if (emailInp && emailInp.value.trim() && !validateEmail(emailInp)) valid = false;
+  if (!valid) return;
+
   const btn = btnId ? document.getElementById(btnId) : form.querySelector('button[type=submit]');
   const successEl = document.getElementById(successId);
   const errorEl = errorId ? document.getElementById(errorId) : null;

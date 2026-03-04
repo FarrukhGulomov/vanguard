@@ -1553,6 +1553,16 @@ input,select,textarea{font-family:inherit}
   background:rgba(239,68,68,.08);border:1px solid rgba(239,68,68,.3);
   color:#dc2626;font-weight:600;font-size:14px;
 }
+.cform__field-err{
+  display:none;font-size:12px;color:#ef4444;font-weight:600;
+  padding:4px 2px;
+}
+.contact--dark .cform__group input.invalid,
+.contact--dark .cform__group textarea.invalid,
+.cform__group input.invalid,
+.cform__group textarea.invalid{
+  border-color:#ef4444;box-shadow:0 0 0 3px rgba(239,68,68,.15);
+}
 
 /* ════════════════════════════════
    FLOATING BUTTONS

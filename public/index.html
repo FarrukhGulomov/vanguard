@@ -904,7 +904,15 @@
           </div>
           <div class="cform__group">
             <label data-i18n="form.phone">Телефон *</label>
-            <input type="tel" name="phone" required maxlength="30" placeholder="+998 __ ___ __ __" />
+            <input type="tel" name="phone" id="cfPhone" required maxlength="20"
+              placeholder="+998 90 123 45 67" autocomplete="tel" />
+            <span class="cform__field-err" id="cfPhoneErr"></span>
+          </div>
+          <div class="cform__group">
+            <label data-i18n="form.email">Email</label>
+            <input type="email" name="email" id="cfEmail" maxlength="100"
+              placeholder="example@mail.com" autocomplete="email" inputmode="email" />
+            <span class="cform__field-err" id="cfEmailErr"></span>
           </div>
           <div class="cform__group">
             <label data-i18n="form.message">Ваш запрос</label>
