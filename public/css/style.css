@@ -987,11 +987,12 @@ input,select,textarea{font-family:inherit}
 /* Dark media column */
 .about--dark .about__media{position:relative}
 .about__yr{
-  position:absolute;top:-20px;right:-10px;
-  font-size:clamp(120px,14vw,200px);font-weight:900;
-  color:rgba(255,255,255,.12);line-height:1;
+  display:block;
+  font-size:clamp(72px,9vw,110px);font-weight:900;
+  color:rgba(255,255,255,.2);line-height:0.85;
+  letter-spacing:-4px;
   pointer-events:none;user-select:none;
-  letter-spacing:-8px;
+  margin-bottom:-4px;
 }
 .about__yr-label{
   font-size:13px;font-weight:700;
