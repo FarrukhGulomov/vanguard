@@ -12,13 +12,19 @@
   <meta property="og:type" content="website" />
   <title>Vanguard Logistics — Транспортно-экспедиторская компания| Logistics Company in Uzbekistan | Cargo Shipping | Vanguard Logistics</title>
   <link rel="icon" type="image/png" href="/assets/logo-icon.png" />
+  <!-- Preload LCP hero background -->
+  <link rel="preload" as="image" href="/assets/img/hero-bg.webp" type="image/webp" fetchpriority="high" />
+  <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800;900&display=swap" rel="stylesheet" />
+  <!-- Critical CSS -->
   <link rel="stylesheet" href="/css/style.css" />
-  <!-- Leaflet.js (local, no CDN) -->
-  <link rel="stylesheet" href="/css/leaflet.css" />
+  <!-- Deferred non-critical CSS -->
+  <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'" />
+  <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" /></noscript>
+  <link rel="preload" href="/css/leaflet.css" as="style" onload="this.onload=null;this.rel='stylesheet'" />
+  <noscript><link rel="stylesheet" href="/css/leaflet.css" /></noscript>
 </head>
 <body>
 
@@ -412,7 +418,7 @@
 
       <div class="route-card" data-aos="fade-up" data-aos-delay="0">
         <div class="route-card__map">
-          <img src="./assets/img/uzb-cis.jpg" alt="" class="route-card__flag" />
+          <img src="./assets/img/uzb-cis (1).webp" alt="Узбекистан СНГ" class="route-card__flag" width="800" height="160" loading="lazy" />
         </div>
         <div class="route-card__body">
           <h3 data-i18n="route.1.title">Узбекистан — СНГ</h3>
@@ -428,7 +434,7 @@
 
       <div class="route-card" data-aos="fade-up" data-aos-delay="100">
         <div class="route-card__map">
-          <img src="./assets/img/euro.png" alt="" class="route-card__flag" />
+          <img src="./assets/img/euro.webp" alt="СНГ Балтика Европа" class="route-card__flag" width="800" height="160" loading="lazy" />
         </div>
         <div class="route-card__body">
           <h3 data-i18n="route.2.title">СНГ — Балтика — Европа</h3>
@@ -444,7 +450,7 @@
 
       <div class="route-card" data-aos="fade-up" data-aos-delay="200">
         <div class="route-card__map">
-          <img src="./assets/img/china.jpg" alt="" class="route-card__flag" />
+          <img src="./assets/img/china.webp" alt="Юго-Восточная Азия" class="route-card__flag" width="800" height="160" loading="lazy" />
         </div>
         <div class="route-card__body">
           <h3 data-i18n="route.3.title">Юго-Восточная Азия</h3>
@@ -595,19 +601,19 @@
     <!-- Photo gallery — 4 equal photos 2×2 -->
     <div class="wh__gallery" data-aos="fade-up" data-aos-delay="100">
       <div class="wh__photo">
-        <img src="./assets/img/whr1.jpg" alt="Интерьер склада" />
+        <img src="./assets/img/whr1.webp" alt="Интерьер склада" width="800" height="260" loading="lazy" />
         <div class="wh__photo-cap"><i class="fas fa-warehouse"></i> <span data-i18n="warehouse.cap1">Интерьер склада</span></div>
       </div>
       <div class="wh__photo">
-        <img src="./assets/img/whr2.jpg" alt="Стеллажное хранение" />
+        <img src="./assets/img/whr2.webp" alt="Стеллажное хранение" width="800" height="260" loading="lazy" />
         <div class="wh__photo-cap"><i class="fas fa-boxes"></i> <span data-i18n="warehouse.cap2">Стеллажное хранение</span></div>
       </div>
       <div class="wh__photo">
-        <img src="./assets/img/whr3.jpg" alt="Погрузочная техника" />
+        <img src="./assets/img/whr3.webp" alt="Погрузочная техника" width="800" height="260" loading="lazy" />
         <div class="wh__photo-cap"><i class="fas fa-dolly-flatbed"></i> <span data-i18n="warehouse.cap3">Погрузочная техника</span></div>
       </div>
       <div class="wh__photo">
-        <img src="./assets/img/whr4.jpg" alt="Зона погрузки" />
+        <img src="./assets/img/whr4.webp" alt="Зона погрузки" width="800" height="260" loading="lazy" />
         <div class="wh__photo-cap"><i class="fas fa-truck-loading"></i> <span data-i18n="warehouse.cap4">Зона погрузки</span></div>
       </div>
     </div>
@@ -793,10 +799,10 @@
         <div class="about__yr" aria-hidden="true">8</div>
         <p class="about__yr-label" data-i18n="stat.years.label">лет на рынке</p>
         <div class="about__imgs-grid">
-          <img src="./assets/img/truck.jpg" alt="Автоперевозки" />
-          <img src="./assets/img/sea.jpg" alt="Морские перевозки" />
-          <img src="./assets/img/train.jpg" alt="ЖД перевозки" />
-          <img src="./assets/img/avia.jpg" alt="Авиаперевозки" />
+          <img src="./assets/img/truck.webp" alt="Автоперевозки" width="600" height="400" loading="lazy" />
+          <img src="./assets/img/sea.webp" alt="Морские перевозки" width="600" height="400" loading="lazy" />
+          <img src="./assets/img/train.webp" alt="ЖД перевозки" width="600" height="400" loading="lazy" />
+          <img src="./assets/img/avia.webp" alt="Авиаперевозки" width="600" height="400" loading="lazy" />
         </div>
         <a href="#contact" class="about__more-link">
           <span data-i18n="about.more">Подробнее о компании</span> <i class="fas fa-arrow-right"></i>
@@ -945,7 +951,7 @@
 
         <div class="footer__brand">
           <div class="footer__logo-wrap">
-            <img src="/assets/logo.png" alt="Vanguard Logistics" class="footer__logo" />
+            <img src="/assets/logo.png" alt="Vanguard Logistics" class="footer__logo" width="160" height="40" loading="lazy" />
           </div>
           <p data-i18n="footer.tagline">Транспортно-экспедиторская компания. Комплексная доставка Ваших грузов.</p>
           <div class="footer__contact">
