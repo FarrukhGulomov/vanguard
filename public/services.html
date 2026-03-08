@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Услуги Vanguard Logistics — международные и локальные грузоперевозки, таможенное оформление, складские услуги, негабаритные грузы по Узбекистану, СНГ, Европе и Азии." />
+  <meta name="keywords" content="грузоперевозки, таможенное оформление, складские услуги, негабаритные грузы, Узбекистан, логистика" />
+  <meta property="og:title" content="Услуги — Vanguard Logistics" />
+  <meta property="og:description" content="Полный спектр логистических решений: перевозки, таможня, склад, страхование." />
+  <meta property="og:type" content="website" />
+  <title>Услуги — Vanguard Logistics | Международные грузоперевозки Узбекистан</title>
+  <link rel="canonical" href="https://vanguarduzb.com/services" />
+  <link rel="icon" type="image/png" href="/assets/logo-icon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/css/style.css" />
+  <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'" />
+  <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" /></noscript>
+</head>
+<body>
+
+<!-- ══════════════════════════════════════════
+     TOP BAR
+══════════════════════════════════════════ -->
+<div class="topbar" id="topbar">
+  <div class="container">
+    <div class="topbar__inner">
+      <div class="topbar__left">
+        <a href="tel:+998777462222" class="topbar__link">
+          <i class="fas fa-phone-alt"></i> +998 77 746 22 22
+        </a>
+        <a href="mailto:anvarataev@vanguarduzb.com" class="topbar__link">
+          <i class="fas fa-envelope"></i> anvarataev@vanguarduzb.com
+        </a>
+        <span class="topbar__link topbar__time">
+          <i class="fas fa-clock"></i> <span data-i18n="topbar.hours">Пн–Вс: 24/7</span>
+        </span>
+      </div>
+      <div class="topbar__right">
+        <div class="topbar__social">
+          <a href="https://t.me/Anvar_Atayev" target="_blank" rel="noopener" aria-label="Telegram"><i class="fab fa-telegram"></i></a>
+          <a href="https://instagram.com/vanguardlogistics" target="_blank" rel="noopener" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="https://wa.me/998777462222" target="_blank" rel="noopener" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+        </div>
+        <div class="lang-switcher">
+          <button class="lang-btn active" data-lang="ru">РУ</button>
+          <button class="lang-btn" data-lang="uz">UZ</button>
+          <button class="lang-btn" data-lang="en">EN</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════════
+     HEADER
+══════════════════════════════════════════ -->
+<header class="header" id="header">
+  <div class="container">
+    <div class="header__inner">
+      <a href="/" class="logo" aria-label="Vanguard Logistics">
+        <div class="logo__emblem">
+          <img src="/assets/logo-icon.png" alt="" class="logo__emblem-img" />
+        </div>
+        <div class="logo__wordmark">
+          <span class="logo__wordmark-top">VANGUARD</span>
+          <span class="logo__wordmark-bottom">LOGISTICS</span>
+        </div>
+      </a>
+
+      <nav class="nav" id="nav">
+        <ul class="nav__list">
+          <li class="nav__item">
+            <a href="/services" class="nav__link nav__link--active" data-i18n="nav.services">Услуги</a>
+          </li>
+          <li class="nav__item nav__item--dropdown">
+            <a href="/#routes" class="nav__link nav__link--drop" data-i18n="nav.routes">
+              Направления <i class="fas fa-chevron-down"></i>
+            </a>
+            <div class="nav__dropdown">
+              <a href="/#routes" data-i18n="nav.routes.cis"><i class="fas fa-map-marker-alt"></i> Узбекистан — СНГ</a>
+              <a href="/#routes" data-i18n="nav.routes.baltics"><i class="fas fa-map-marker-alt"></i> СНГ — Балтика</a>
+              <a href="/#routes" data-i18n="nav.routes.europe"><i class="fas fa-map-marker-alt"></i> Европа</a>
+              <a href="/#routes" data-i18n="nav.routes.asia"><i class="fas fa-map-marker-alt"></i> Юго-Восточная Азия</a>
+            </div>
+          </li>
+          <li class="nav__item nav__item--dropdown">
+            <a href="/services" class="nav__link nav__link--drop" data-i18n="nav.transport">
+              Транспорт <i class="fas fa-chevron-down"></i>
+            </a>
+            <div class="nav__dropdown">
+              <a href="/services#road"><i class="fas fa-truck"></i> <span data-i18n="nav.t1">Автомобильный</span></a>
+              <a href="/services#rail"><i class="fas fa-train"></i> <span data-i18n="nav.t2">Железнодорожный</span></a>
+              <a href="/services#sea"><i class="fas fa-ship"></i> <span data-i18n="nav.t3">Морской</span></a>
+              <a href="/services#air"><i class="fas fa-plane"></i> <span data-i18n="nav.t4">Авиа</span></a>
+            </div>
+          </li>
+          <li class="nav__item">
+            <a href="/#warehouse" class="nav__link" data-i18n="nav.warehouse">Наш склад</a>
+          </li>
+          <li class="nav__item">
+            <a href="/#about" class="nav__link" data-i18n="nav.about">О нас</a>
+          </li>
+          <li class="nav__item">
+            <a href="/#contact" class="nav__link" data-i18n="nav.contact">Контакты</a>
+          </li>
+        </ul>
+      </nav>
+
+      <div class="header__actions">
+        <a href="tel:+998777462222" class="header__phone">
+          <i class="fas fa-phone-alt"></i>
+          <span>+998 77 746 22 22</span>
+        </a>
+        <a href="/#contact" class="btn btn--primary" data-i18n="nav.cta">Оставить заявку</a>
+      </div>
+
+      <button class="burger" id="burger" aria-label="Меню">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- ══════════════════════════════════════════
+     PAGE HERO
+══════════════════════════════════════════ -->
+<section class="sp-hero">
+  <div class="container">
+    <nav class="sp-hero__breadcrumb" aria-label="breadcrumb">
+      <a href="/" data-i18n="sp.bread.home">Главная</a>
+      <i class="fas fa-chevron-right"></i>
+      <span data-i18n="sp.bread.services">Услуги</span>
+    </nav>
+    <div class="sp-hero__content">
+      <div class="sp-hero__badge">
+        <i class="fas fa-boxes"></i>
+        <span data-i18n="services.label">Что мы предлагаем</span>
+      </div>
+      <h1 class="sp-hero__title" data-i18n="sp.hero.title">Полный спектр логистических решений</h1>
+      <p class="sp-hero__sub" data-i18n="sp.hero.sub">Международные перевозки, таможня, склад — всё под ключ</p>
+      <div class="sp-hero__stats">
+        <div class="sp-hero__stat">
+          <strong>8</strong>
+          <span data-i18n="stat.years.label">лет на рынке</span>
+        </div>
+        <div class="sp-hero__stat-sep"></div>
+        <div class="sp-hero__stat">
+          <strong>18 000+</strong>
+          <span data-i18n="stat.shipments.label">перевозок</span>
+        </div>
+        <div class="sp-hero__stat-sep"></div>
+        <div class="sp-hero__stat">
+          <strong>3 000+</strong>
+          <span data-i18n="stat.vehicles.label">транспортных средств</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="sp-hero__wave"></div>
+</section>
+
+<!-- ══════════════════════════════════════════
+     SERVICES GRID
+══════════════════════════════════════════ -->
+<section class="section sp-overview" id="services-list">
+  <div class="container">
+    <div class="section__head section__head--center">
+      <div class="section__label" data-i18n="sp.overview.label">Что мы предлагаем</div>
+      <h2 class="section__title" data-i18n="sp.overview.title">Услуги Vanguard Logistics</h2>
+      <p class="section__sub" data-i18n="sp.overview.sub">Комплексные логистические решения для бизнеса любого масштаба</p>
+    </div>
+
+    <div class="sp-grid">
+
+      <!-- Card 1 -->
+      <article class="sp-card" id="road">
+        <div class="sp-card__head">
+          <div class="sp-card__icon"><i class="fas fa-globe-asia"></i></div>
+          <h3 class="sp-card__title" data-i18n="sp.s1.title">Международные и локальные грузоперевозки</h3>
+        </div>
+        <div class="sp-card__body">
+          <p class="sp-card__desc" data-i18n="sp.s1.desc">Доставка грузов любого объёма по Узбекистану и за рубеж. Полный контроль на каждом этапе.</p>
+          <ul class="sp-card__features">
+            <li data-i18n="sp.s1.f1">Авто, ж/д, авиа и морские перевозки</li>
+            <li data-i18n="sp.s1.f2">Партнёрская сеть 3 000+ перевозчиков</li>
+            <li data-i18n="sp.s1.f3">GPS-мониторинг в реальном времени</li>
+            <li data-i18n="sp.s1.f4">Страхование KAFOLAT</li>
+          </ul>
+          <a href="/#contact" class="sp-card__cta" data-i18n="sp.svc.more">Подробнее <i class="fas fa-arrow-right"></i></a>
+        </div>
+      </article>
+
+      <!-- Card 2 -->
+      <article class="sp-card">
+        <div class="sp-card__head">
+          <div class="sp-card__icon"><i class="fas fa-box"></i></div>
+          <h3 class="sp-card__title" data-i18n="sp.s2.title">Малотоннажные перевозки</h3>
+        </div>
+        <div class="sp-card__body">
+          <p class="sp-card__desc" data-i18n="sp.s2.desc">Транспортировка небольших партий груза с гарантированными сроками и прозрачными тарифами.</p>
+          <ul class="sp-card__features">
+            <li data-i18n="sp.s2.f1">Консолидированные и сборные грузы</li>
+            <li data-i18n="sp.s2.f2">Выгодные тарифы</li>
+            <li data-i18n="sp.s2.f3">Экспресс-доставка</li>
+            <li data-i18n="sp.s2.f4">Дверь в дверь</li>
+          </ul>
+          <a href="/#contact" class="sp-card__cta" data-i18n="sp.svc.more">Подробнее <i class="fas fa-arrow-right"></i></a>
+        </div>
+      </article>
+
+      <!-- Card 3 -->
+      <article class="sp-card">
+        <div class="sp-card__head">
+          <div class="sp-card__icon sp-card__icon--2"><i class="fas fa-industry"></i></div>
+          <h3 class="sp-card__title" data-i18n="sp.s3.title">Негабаритные и тяжеловесные грузы</h3>
+        </div>
+        <div class="sp-card__body">
+          <p class="sp-card__desc" data-i18n="sp.s3.desc">Транспортировка нестандартных грузов с оформлением всех разрешений и маршрутным сопровождением.</p>
+          <ul class="sp-card__features">
+            <li data-i18n="sp.s3.f1">Специальный подвижной состав</li>
+            <li data-i18n="sp.s3.f2">Оформление разрешений</li>
+            <li data-i18n="sp.s3.f3">Машины сопровождения</li>
+            <li data-i18n="sp.s3.f4">До 200 тонн</li>
+          </ul>
+          <a href="/#contact" class="sp-card__cta" data-i18n="sp.svc.more">Подробнее <i class="fas fa-arrow-right"></i></a>
+        </div>
+      </article>
+
+      <!-- Card 4 -->
+      <article class="sp-card" id="sea">
+        <div class="sp-card__head">
+          <div class="sp-card__icon sp-card__icon--2"><i class="fas fa-ship"></i></div>
+          <h3 class="sp-card__title" data-i18n="sp.s4.title">Морские, ЖД и авиаперевозки</h3>
+        </div>
+        <div class="sp-card__body">
+          <p class="sp-card__desc" data-i18n="sp.s4.desc">Мультимодальные решения с оптимальным сочетанием транспорта для лучшего соотношения цены и сроков.</p>
+          <ul class="sp-card__features">
+            <li data-i18n="sp.s4.f1">FCL/LCL контейнерные перевозки</li>
+            <li data-i18n="sp.s4.f2">ЖД по маршрутам СНГ и Китая</li>
+            <li data-i18n="sp.s4.f3">Авиагрузы — срочная доставка</li>
+            <li data-i18n="sp.s4.f4">Интермодальные маршруты</li>
+          </ul>
+          <a href="/#contact" class="sp-card__cta" data-i18n="sp.svc.more">Подробнее <i class="fas fa-arrow-right"></i></a>
+        </div>
+      </article>
+
+      <!-- Card 5 -->
+      <article class="sp-card sp-card--featured">
+        <div class="sp-card__head">
+          <div class="sp-card__icon sp-card__icon--light"><i class="fas fa-file-alt"></i></div>
+          <h3 class="sp-card__title sp-card__title--light" data-i18n="sp.s5.title">Таможенное оформление</h3>
+        </div>
+        <div class="sp-card__body">
+          <p class="sp-card__desc sp-card__desc--light" data-i18n="sp.s5.desc">Полное таможенное сопровождение импорта и экспорта. Все формальности берём на себя.</p>
+          <ul class="sp-card__features sp-card__features--light">
+            <li data-i18n="sp.s5.f1">Декларирование всех видов грузов</li>
+            <li data-i18n="sp.s5.f2">Сертификация и разрешительные</li>
+            <li data-i18n="sp.s5.f3">Все таможенные посты Узбекистана</li>
+            <li data-i18n="sp.s5.f4">Электронный документооборот (ЭДО)</li>
+          </ul>
+          <a href="/#contact" class="sp-card__cta sp-card__cta--light" data-i18n="sp.svc.more">Подробнее <i class="fas fa-arrow-right"></i></a>
+        </div>
+      </article>
+
+      <!-- Card 6 -->
+      <article class="sp-card">
+        <div class="sp-card__head">
+          <div class="sp-card__icon"><i class="fas fa-warehouse"></i></div>
+          <h3 class="sp-card__title" data-i18n="sp.s6.title">Хранение и перетарка контейнеров</h3>
+        </div>
+        <div class="sp-card__body">
+          <p class="sp-card__desc" data-i18n="sp.s6.desc">Ответственное хранение на складском комплексе в Ташкенте с полным страховым покрытием.</p>
+          <ul class="sp-card__features">
+            <li data-i18n="sp.s6.f1">1 000 м² складской площади</li>
+            <li data-i18n="sp.s6.f2">Климат-контроль 0–25°C</li>
+            <li data-i18n="sp.s6.f3">Охрана 24/7 и видеонаблюдение</li>
+            <li data-i18n="sp.s6.f4">Перетарка, консолидация, упаковка</li>
+          </ul>
+          <a href="/#contact" class="sp-card__cta" data-i18n="sp.svc.more">Подробнее <i class="fas fa-arrow-right"></i></a>
+        </div>
+      </article>
+
+      <!-- Card 7 -->
+      <article class="sp-card">
+        <div class="sp-card__head">
+          <div class="sp-card__icon sp-card__icon--3"><i class="fas fa-anchor"></i></div>
+          <h3 class="sp-card__title" data-i18n="sp.s7.title">Внутрипортовое экспедирование</h3>
+        </div>
+        <div class="sp-card__body">
+          <p class="sp-card__desc" data-i18n="sp.s7.desc">Профессиональное экспедирование транзитных грузов в портах и на пограничных переходах.</p>
+          <ul class="sp-card__features">
+            <li data-i18n="sp.s7.f1">Оформление транзитных грузов</li>
+            <li data-i18n="sp.s7.f2">Порты Туркменбаши и Актау</li>
+            <li data-i18n="sp.s7.f3">Агентские услуги</li>
+            <li data-i18n="sp.s7.f4">Мультимодальный транзит</li>
+          </ul>
+          <a href="/#contact" class="sp-card__cta" data-i18n="sp.svc.more">Подробнее <i class="fas fa-arrow-right"></i></a>
+        </div>
+      </article>
+
+      <!-- Card 8 -->
+      <article class="sp-card">
+        <div class="sp-card__head">
+          <div class="sp-card__icon sp-card__icon--3"><i class="fas fa-truck-loading"></i></div>
+          <h3 class="sp-card__title" data-i18n="sp.s8.title">Перевозка нерудных материалов</h3>
+        </div>
+        <div class="sp-card__body">
+          <p class="sp-card__desc" data-i18n="sp.s8.desc">Транспортировка сыпучих и строительных материалов. Собственный автопарк и надёжные партнёры.</p>
+          <ul class="sp-card__features">
+            <li data-i18n="sp.s8.f1">Самосвалы и спецтранспорт</li>
+            <li data-i18n="sp.s8.f2">Строительные и нерудные материалы</li>
+            <li data-i18n="sp.s8.f3">Маршруты по всему Узбекистану</li>
+            <li data-i18n="sp.s8.f4">Скидки на крупные объёмы</li>
+          </ul>
+          <a href="/#contact" class="sp-card__cta" data-i18n="sp.svc.more">Подробнее <i class="fas fa-arrow-right"></i></a>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════
+     HOW WE WORK — process steps
+══════════════════════════════════════════ -->
+<section class="sp-process">
+  <div class="container">
+    <div class="section__head section__head--center">
+      <div class="section__label" data-i18n="sp.proc.label">Как мы работаем</div>
+      <h2 class="section__title" data-i18n="sp.proc.title">4 шага до доставки вашего груза</h2>
+    </div>
+    <div class="sp-steps">
+
+      <div class="sp-step">
+        <div class="sp-step__num">01</div>
+        <div class="sp-step__icon"><i class="fas fa-paper-plane"></i></div>
+        <h4 class="sp-step__title" data-i18n="sp.step1.title">Оставить заявку</h4>
+        <p class="sp-step__desc" data-i18n="sp.step1.desc">Свяжитесь с нами или заполните форму. Менеджер ответит в течение 30 минут.</p>
+      </div>
+
+      <div class="sp-step">
+        <div class="sp-step__num">02</div>
+        <div class="sp-step__icon"><i class="fas fa-route"></i></div>
+        <h4 class="sp-step__title" data-i18n="sp.step2.title">Расчёт маршрута</h4>
+        <p class="sp-step__desc" data-i18n="sp.step2.desc">Рассчитаем стоимость и предложим оптимальный маршрут с учётом сроков и бюджета.</p>
+      </div>
+
+      <div class="sp-step">
+        <div class="sp-step__num">03</div>
+        <div class="sp-step__icon"><i class="fas fa-file-signature"></i></div>
+        <h4 class="sp-step__title" data-i18n="sp.step3.title">Оформление документов</h4>
+        <p class="sp-step__desc" data-i18n="sp.step3.desc">Договор, накладные, таможенные декларации и страховой полис.</p>
+      </div>
+
+      <div class="sp-step">
+        <div class="sp-step__num">04</div>
+        <div class="sp-step__icon"><i class="fas fa-map-marked-alt"></i></div>
+        <h4 class="sp-step__title" data-i18n="sp.step4.title">Доставка и отчёт</h4>
+        <p class="sp-step__desc" data-i18n="sp.step4.desc">GPS-мониторинг груза. Доставка в срок. Полный отчёт по завершении.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════
+     FAQ
+══════════════════════════════════════════ -->
+<section class="section sp-faq">
+  <div class="container">
+    <div class="section__head section__head--center">
+      <div class="section__label" data-i18n="sp.faq.label">Ответы на вопросы</div>
+      <h2 class="section__title" data-i18n="sp.faq.title">Часто задаваемые вопросы</h2>
+    </div>
+
+    <div class="sp-faq__list">
+
+      <div class="sp-faq__item">
+        <button class="sp-faq__q" aria-expanded="false">
+          <span data-i18n="sp.faq.q1">Какие виды грузов вы перевозите?</span>
+          <i class="fas fa-plus"></i>
+        </button>
+        <div class="sp-faq__a">
+          <p data-i18n="sp.faq.a1">Работаем со всеми категориями: генеральные, сыпучие, негабаритные, опасные (ADR), рефрижераторные, ценные и хрупкие. Для каждого типа подбираем оптимальный транспорт.</p>
+        </div>
+      </div>
+
+      <div class="sp-faq__item">
+        <button class="sp-faq__q" aria-expanded="false">
+          <span data-i18n="sp.faq.q2">Как рассчитать стоимость перевозки?</span>
+          <i class="fas fa-plus"></i>
+        </button>
+        <div class="sp-faq__a">
+          <p data-i18n="sp.faq.a2">Стоимость зависит от маршрута, объёма, веса и сроков. Заполните заявку — мы рассчитаем и свяжемся с вами в течение 30 минут.</p>
+        </div>
+      </div>
+
+      <div class="sp-faq__item">
+        <button class="sp-faq__q" aria-expanded="false">
+          <span data-i18n="sp.faq.q3">Работаете ли вы с таможенным оформлением?</span>
+          <i class="fas fa-plus"></i>
+        </button>
+        <div class="sp-faq__a">
+          <p data-i18n="sp.faq.a3">Да, мы предоставляем полное таможенное сопровождение: декларирование, сертификация, разрешительная документация. Работаем на всех таможенных постах Узбекистана.</p>
+        </div>
+      </div>
+
+      <div class="sp-faq__item">
+        <button class="sp-faq__q" aria-expanded="false">
+          <span data-i18n="sp.faq.q4">Есть ли страхование грузов?</span>
+          <i class="fas fa-plus"></i>
+        </button>
+        <div class="sp-faq__a">
+          <p data-i18n="sp.faq.a4">Все перевозки застрахованы через KAFOLAT. Мы несём полную материальную ответственность за сохранность вашего груза на всём маршруте.</p>
+        </div>
+      </div>
+
+      <div class="sp-faq__item">
+        <button class="sp-faq__q" aria-expanded="false">
+          <span data-i18n="sp.faq.q5">Можно ли отслеживать груз в пути?</span>
+          <i class="fas fa-plus"></i>
+        </button>
+        <div class="sp-faq__a">
+          <p data-i18n="sp.faq.a5">Да, все автомобили оснащены GPS-трекерами. Вы можете отслеживать местонахождение груза через личного менеджера в реальном времени.</p>
+        </div>
+      </div>
+
+      <div class="sp-faq__item">
+        <button class="sp-faq__q" aria-expanded="false">
+          <span data-i18n="sp.faq.q6">Как давно компания работает?</span>
+          <i class="fas fa-plus"></i>
+        </button>
+        <div class="sp-faq__a">
+          <p data-i18n="sp.faq.a6">Vanguard Logistics работает с 2018 года. За 8 лет мы выполнили более 18 000 перевозок и зарекомендовали себя как надёжный партнёр.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════
+     CTA BANNER
+══════════════════════════════════════════ -->
+<section class="sp-cta-section">
+  <div class="sp-cta-section__bg"></div>
+  <div class="container">
+    <div class="sp-cta-section__inner">
+      <div class="sp-cta-section__text">
+        <h2 data-i18n="sp.cta.title">Готовы организовать вашу перевозку?</h2>
+        <p data-i18n="sp.cta.sub">Оставьте заявку — менеджер рассчитает стоимость и свяжется с вами в течение 30 минут</p>
+      </div>
+      <div class="sp-cta-section__actions">
+        <a href="/#contact" class="btn btn--gold btn--lg">
+          <span data-i18n="sp.cta.btn">Оставить заявку</span>
+          <i class="fas fa-arrow-right"></i>
+        </a>
+        <a href="tel:+998777462222" class="sp-cta-section__phone">
+          <i class="fas fa-phone-alt"></i> +998 77 746 22 22
+        </a>
+      </div>
+      <div class="sp-cta-section__trust">
+        <span><i class="fas fa-shield-alt"></i> <span data-i18n="hero.f1">Страховое покрытие KAFOLAT</span></span>
+        <span><i class="fas fa-headset"></i> <span data-i18n="hero.f2">24/7 поддержка</span></span>
+        <span><i class="fas fa-award"></i> <span data-i18n="hero.f3">8 лет на рынке</span></span>
+        <span><i class="fas fa-truck"></i> <span data-i18n="hero.f4">3000+ ТС</span></span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════
+     FOOTER
+══════════════════════════════════════════ -->
+<footer class="footer">
+  <div class="footer__top">
+    <div class="container">
+      <div class="footer__grid">
+
+        <div class="footer__brand">
+          <div class="footer__logo-wrap">
+            <img src="/assets/logo.png" alt="Vanguard Logistics" class="footer__logo" width="160" height="40" loading="lazy" />
+          </div>
+          <p data-i18n="footer.tagline">Транспортно-экспедиторская компания. Комплексная доставка Ваших грузов.</p>
+          <div class="footer__contact">
+            <i class="fas fa-phone-alt"></i>
+            <a href="tel:+998777462222">+998 77 746 22 22</a>
+          </div>
+          <div class="footer__contact">
+            <i class="fas fa-envelope"></i>
+            <a href="mailto:anvarataev@vanguarduzb.com">anvarataev@vanguarduzb.com</a>
+          </div>
+          <div class="footer__contact">
+            <i class="fas fa-map-marker-alt"></i>
+            <span data-i18n="contact.address.val">г. Ташкент, Яккасарайский район, ул. Бобура, д. 63, кв. 18</span>
+          </div>
+          <div class="footer__social">
+            <a href="https://t.me/Anvar_Atayev" target="_blank" rel="noopener"><i class="fab fa-telegram"></i></a>
+            <a href="https://instagram.com/vanguardlogistics" target="_blank" rel="noopener"><i class="fab fa-instagram"></i></a>
+            <a href="https://wa.me/998777462222" target="_blank" rel="noopener"><i class="fab fa-whatsapp"></i></a>
+          </div>
+        </div>
+
+        <div class="footer__col">
+          <h4 data-i18n="footer.menu">Меню</h4>
+          <ul>
+            <li><a href="/services" data-i18n="nav.services">Услуги</a></li>
+            <li><a href="/#routes" data-i18n="nav.routes">Направления</a></li>
+            <li><a href="/#about" data-i18n="nav.about">О компании</a></li>
+            <li><a href="/#contact" data-i18n="nav.contact">Контакты</a></li>
+          </ul>
+        </div>
+
+        <div class="footer__col">
+          <h4 data-i18n="footer.services">Наши услуги</h4>
+          <ul>
+            <li><a href="/services#road" data-i18n="sp.s1.title">Международные перевозки</a></li>
+            <li><a href="/services" data-i18n="sp.s5.title">Таможенное оформление</a></li>
+            <li><a href="/services" data-i18n="sp.s3.title">Негабаритные грузы</a></li>
+            <li><a href="/services" data-i18n="sp.s6.title">Складские услуги</a></li>
+            <li><a href="/services#sea" data-i18n="sp.s4.title">Мультимодальные перевозки</a></li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <div class="footer__bottom">
+    <div class="container">
+      <div class="footer__bottom-inner">
+        <p>&copy; <span id="year"></span> Vanguard Logistics. <span data-i18n="footer.rights">Все права защищены.</span> ИНН: 312804241</p>
+        <a href="https://t.me/farruh" target="_blank" rel="noopener" class="footer__dev">
+          Разработано <span>Trustbox Inc</span>
+        </a>
+        <div class="lang-switcher">
+          <button class="lang-btn" data-lang="ru">РУ</button>
+          <button class="lang-btn" data-lang="uz">UZ</button>
+          <button class="lang-btn" data-lang="en">EN</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- Floating buttons -->
+<a href="https://t.me/Anvar_Atayev" class="float-btn float-btn--tg" target="_blank" rel="noopener" aria-label="Telegram">
+  <i class="fab fa-telegram"></i>
+</a>
+<a href="tel:+998777462222" class="float-btn float-btn--call" aria-label="Позвонить">
+  <i class="fas fa-phone-alt"></i>
+</a>
+<button class="scroll-top" id="scrollTop" aria-label="Наверх">
+  <i class="fas fa-chevron-up"></i>
+</button>
+
+<script src="/js/main.js"></script>
+<script>
+  // FAQ accordion
+  document.querySelectorAll('.sp-faq__q').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const item = btn.closest('.sp-faq__item');
+      const answer = item.querySelector('.sp-faq__a');
+      const isOpen = item.classList.contains('open');
+      // Close all
+      document.querySelectorAll('.sp-faq__item.open').forEach(el => {
+        el.classList.remove('open');
+        el.querySelector('.sp-faq__a').style.maxHeight = null;
+        el.querySelector('.sp-faq__q').setAttribute('aria-expanded','false');
+      });
+      // Open clicked
+      if (!isOpen) {
+        item.classList.add('open');
+        answer.style.maxHeight = answer.scrollHeight + 'px';
+        btn.setAttribute('aria-expanded','true');
+      }
+    });
+  });
+</script>
+
+</body>
+</html>
