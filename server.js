@@ -38,8 +38,8 @@ const contactLimiter = rateLimit({
   message: { success: false, message: 'Слишком много запросов. Попробуйте через 15 минут.' }
 });
 
-// Serve static files
-app.use(express.static(path.join(__dirname, 'public')));
+// Serve static files (extensions:['html'] serves services.html for /services etc.)
+app.use(express.static(path.join(__dirname, 'public'), { extensions: ['html'] }));
 
 // ── Helpers ──────────────────────────────────────────────
 /** Escape HTML to prevent XSS in email body */
