@@ -1739,8 +1739,8 @@ input,select,textarea{font-family:inherit}
 }
 .sp-hero::before{
   content:'';position:absolute;inset:0;
-  background:url('/assets/img/hero-bg.webp') center/cover no-repeat;
-  opacity:.12;
+  background:url('../assets/img//bg-heroo.webp') center/cover no-repeat;
+  opacity: .50;
 }
 .sp-hero::after{
   content:'';position:absolute;inset:0;
